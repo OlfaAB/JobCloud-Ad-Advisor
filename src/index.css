@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  .phase-tab {
+    @apply flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200;
+  }
+  .phase-tab-active {
+    @apply bg-blue-600 text-white shadow-lg;
+  }
+  .phase-tab-completed {
+    @apply bg-green-100 text-green-700;
+  }
+  .phase-tab-locked {
+    @apply opacity-40 cursor-not-allowed text-slate-400;
+  }
+}
