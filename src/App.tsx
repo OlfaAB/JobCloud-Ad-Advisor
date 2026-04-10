@@ -8,6 +8,7 @@ import Pricing from './components/phases/Pricing';
 import PerformancePreview from './components/phases/PerformancePreview';
 import Checkout from './components/phases/Checkout';
 import AdManager from './components/phases/AdManager';
+import AIPolicyDocument from './components/phases/AIPolicyDocument';
 
 function PhaseRouter() {
   const { state } = useApp();
@@ -19,6 +20,7 @@ function PhaseRouter() {
     case 4: return <PerformancePreview />;
     case 5: return <Checkout />;
     case 6: return <AdManager />;
+    case 7: return <AIPolicyDocument />;
     default: return <JobDetails />;
   }
 }
