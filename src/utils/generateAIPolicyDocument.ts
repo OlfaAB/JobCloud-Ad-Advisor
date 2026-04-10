@@ -30,11 +30,11 @@ export async function generateAIPolicyDocument() {
               new TableRow({
                 children: [
                   new TableCell({
-                    children: [new Paragraph({ text: "Field", bold: true })],
+                    children: [new Paragraph({ children: [new TextRun({ text: "Field", bold: true })] })],
                     width: { size: 30, type: WidthType.PERCENTAGE },
                   }),
                   new TableCell({
-                    children: [new Paragraph({ text: "Details", bold: true })],
+                    children: [new Paragraph({ children: [new TextRun({ text: "Details", bold: true })] })],
                     width: { size: 70, type: WidthType.PERCENTAGE },
                   }),
                 ],
@@ -186,11 +186,11 @@ export async function generateAIPolicyDocument() {
               new TableRow({
                 children: [
                   new TableCell({
-                    children: [new Paragraph({ text: "Principle", bold: true })],
+                    children: [new Paragraph({ children: [new TextRun({ text: "Principle", bold: true })] })],
                     width: { size: 30, type: WidthType.PERCENTAGE },
                   }),
                   new TableCell({
-                    children: [new Paragraph({ text: "Description", bold: true })],
+                    children: [new Paragraph({ children: [new TextRun({ text: "Description", bold: true })] })],
                     width: { size: 70, type: WidthType.PERCENTAGE },
                   }),
                 ],
@@ -331,11 +331,11 @@ export async function generateAIPolicyDocument() {
               new TableRow({
                 children: [
                   new TableCell({
-                    children: [new Paragraph({ text: "Tier", bold: true })],
+                    children: [new Paragraph({ children: [new TextRun({ text: "Tier", bold: true })] })],
                     width: { size: 30, type: WidthType.PERCENTAGE },
                   }),
                   new TableCell({
-                    children: [new Paragraph({ text: "Definition", bold: true })],
+                    children: [new Paragraph({ children: [new TextRun({ text: "Definition", bold: true })] })],
                     width: { size: 70, type: WidthType.PERCENTAGE },
                   }),
                 ],
@@ -463,9 +463,8 @@ export async function generateAIPolicyDocument() {
           ),
 
           new Paragraph({
-            text: aiPolicyData.training.note,
+            children: [new TextRun({ text: aiPolicyData.training.note, italics: true })],
             spacing: { after: 200 },
-            italics: true,
           }),
 
           new Paragraph({
@@ -480,8 +479,7 @@ export async function generateAIPolicyDocument() {
           }),
 
           new Paragraph({
-            text: "Internally:",
-            bold: true,
+            children: [new TextRun({ text: "Internally:", bold: true })],
             spacing: { before: 100, after: 100 },
           }),
 
@@ -495,8 +493,7 @@ export async function generateAIPolicyDocument() {
           ),
 
           new Paragraph({
-            text: "Externally (light version):",
-            bold: true,
+            children: [new TextRun({ text: "Externally (light version):", bold: true })],
             spacing: { before: 200, after: 100 },
           }),
 
